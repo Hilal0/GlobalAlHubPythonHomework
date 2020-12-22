@@ -1,0 +1,22 @@
+d1= int(input(" deger1 i tam sayı olarak giriniz:"))
+
+d2= float(input("deger2 yi ondalıklı olarak giriniz:"))
+
+d3= str(input("deger3 ü dizi olarak giriniz:"))
+
+d4= "deger4 ü giriniz:"
+input(f'{d4}')
+
+d5 = "deger5 i giriniz:"
+input(f'{d5}')
+
+print(d1)
+print(type(d1))
+print(d2)
+print(type(d2))
+print(d3)
+print(type(d3))
+print(d4)
+print(type(d4))
+print(d5)
+print(type(d5))
