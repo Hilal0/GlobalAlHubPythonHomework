@@ -2,8 +2,9 @@ list = []
 
 name = str(input("Please enter a name:"))
 lastname = str(input("Please enter a lastname:"))
-age = int(input("Please enter a age:"))
-dateofbirth = int(input("Please enter a dateofbirth:"))
+age = float(input("Please enter a age:"))
+dateofbirth = int(input("Please enter a dateofbirth(just year):"))
+
 
 list.append(name)
 list.append(lastname)
@@ -13,6 +14,7 @@ list.append(dateofbirth)
 for i in list:
     print(i)
 
+list = f"{name} {lastname} {age} {dateofbirth}"
 print(list)
 
 if age >= 18 :
