@@ -1,0 +1,20 @@
+d1= int(input(" please enter a integer:"))
+
+d2= float(input("please enter a float:"))
+
+d3= str(input("please enter a string:"))
+
+d4= bool(input("please enter a bool:"))
+
+d5= input("please enter a value:")
+
+print("value1 {}".format(d1))
+print(type(d1))
+print("value2 {}".format(d2))
+print(type(d2))
+print("value3 {}".format(d3))
+print(type(d3))
+print("value4 {}".format(d4))
+print(type(d4))
+print("value5 4{}".format(d5))
+print(type(d5))
