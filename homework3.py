@@ -1,0 +1,53 @@
+import random
+
+name = input("What is your name? ")
+print(f"Hello {name}!")
+ready = input("Let's start if you're ready to play. Please click y for yes or for no ['y' or 'n'] : ")
+if ready == "y":
+    print("Let's start! :)")
+else :
+    print("Maybe later! :'(")
+words = ["python" , "programming" ,"homework", "github" ,"laptop" , "computer", "windows", "linux", "code" , "community" , "global" , "linkedin" , "toplearner"]
+word = random.choice(words)
+guess_number = 8
+characters = []
+x = len(word)
+z = list('_' * x)
+print(' '.join(z), end='\n')
+while guess_number > 0:
+    y = input("Guess a character: ")
+    if y in characters:
+        print("Please guess a different character :( ")
+        continue
+
+    elif len(y) > 1:
+        print("Please enter only a character ")
+        continue
+
+    elif y not in word:
+        guess_number -= 1
+        print("Wrong guess!. You have {} guesses left.".format(guess_number))
+
+    else:
+        for i in range(len(word)):
+            if y == word[i]:
+                print("Right guess :)")
+                z[i] = y
+                characters.append(y)
+        print(' '.join(z), end='\n')
+
+    answer = input("Do you want to guess the word? Please click y for yes or for no ['y' or 'n'] : ")
+
+    if answer == "y":
+        guess = input("You can guess the word: ")
+        if guess == word:
+            print("Right guess. You win! Congratulations :)")
+            break
+        else:
+            guess_number -= 1
+            print("Wrong guess!. You have {} guesses left.".format(guess_number))
+
+
+    if guess_number == 0:
+        print("Your guess is over. You lost! Game Over :(")
+        break
